@@ -1,0 +1,157 @@
+= LOTTE Demo REST API Guide
+이문혁;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+[[overview]]
+= 개요
+
+[[overview-http-verbs]]
+== HTTP 동사
+
+본 REST API에서 사용하는 HTTP 동사(verbs)는 가능한 한 표준 HTTP와 REST 규약을 따른다.
+
+|===
+| 동사 | 용례
+
+| `GET`
+| 리소스를 가져올 때 사용
+
+| `POST`
+| 새 리소스를 만들 때 사용
+
+| `PUT`
+| 기존 리소스의 전체를 수정할 때 사용
+
+| `PATCH`
+| 기존 리소스의 일부를 수정할 때 사용
+
+| `DELETE`
+| 기존 리소스를 삭제할 떄 사용
+|===
+
+[[api]]
+== API
+
+[[resources-add-schedule]]
+=== 영화 상영 등록
+
+`POST` 요청을 사용하여 영화 스케쥴에 영화를 등록할 수 있다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/add-schedule/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/add-schedule/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/add-schedule/http-response.adoc[]
+
+
+
+
+[[resources-remove-schedule]]
+=== 영화 상영 등록 취소
+
+`DELETE` 요청을 사용하여 영화 스케쥴에 영화를 취소할 수 있다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/remove-schedule/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/remove-schedule/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/remove-schedule/http-response.adoc[]
+
+
+
+
+[[resources-buy-ticket]]
+=== 영화 예매
+
+`POST` 요청을 사용하여 영화 예매를 할 수 있다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/buy-ticket/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/buy-ticket/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/buy-ticket/http-response.adoc[]
+
+
+
+
+[[resources-cancel-ticket]]
+=== 영화 예매 취소
+
+`DELETE` 요청을 사용하여 영화 예매를 할 수 있다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/cancel-ticket/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/cancel-ticket/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/cancel-ticket/http-response.adoc[]
+
+
+
+
+[[resources-my-ticket]]
+=== 영화 예매 조회
+
+`GET` 요청을 사용하여 본인이 예매한 영화를 조회한다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/my-tickets/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/my-tickets/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/my-tickets/http-response.adoc[]
+
+
+
+
+[[resources-show-screen]]
+=== 상영관 조회
+
+`GET` 요청을 사용하여 특정 상영관의 상영 영화 및 예매 현황 정보를 조회한다.
+
+[[http-response]]
+==== curl-request
+include::{snippets}/show-screen/curl-request.adoc[]
+
+[[http-request]]
+==== http-request
+include::{snippets}/show-screen/http-request.adoc[]
+
+[[http-response]]
+==== http-response
+include::{snippets}/show-screen/http-response.adoc[]
